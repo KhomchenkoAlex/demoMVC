@@ -1,0 +1,31 @@
+spring:
+  thymeleaf:
+    mode: HTML5
+    check-template: true
+    encoding: utf-8
+    cache: false
+    suffix: .html
+    enabled: true
+    check-template-location: true
+    prefix: classpath:/templates/
+
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+    database: H2
+
+  datasource:
+        url: jdbc:h2:tcp://localhost/~/car
+        username: root
+        password: root
+        driver-class-name: org.h2.Driver
+
+server:
+  port: 8080
